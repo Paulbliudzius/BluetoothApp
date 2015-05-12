@@ -1,0 +1,44 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#333333"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:keepScreenOn="true" android:textColor="#FFFFFF"
+            android:textStyle="bold" android:textSize="30sp" android:gravity="center"
+            android:text="@string/dummy_content" />
+        <ListView android:id="@+id/listView"
+            android:padding="16dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:keepScreenOn="true" android:textColor="#33b5e5"
+            android:textStyle="bold" android:textSize="30sp" android:gravity="center"></ListView>
+    </TableLayout>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay" android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Button android:id="@+id/scan_button" style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="@string/scan_text" />
+            <Button android:id="@+id/host_button" style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="@string/host_text" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Bluetooth</string>
+
+    <string name="scan_text">Scan Bluetooth</string>
+    <string name="host_text">Present Bluetooth</string>
+    <string name="dummy_content">Other\nContent</string>
+</resources>
